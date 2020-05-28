@@ -153,14 +153,26 @@ export class Calculator extends Component {
     componentWillUnmount() {
         document.removeEventListener('keydown', this.keyPressedDown)
     }
-
+    getOverall = () => {
+        const {
+            value,
+            inputValue,
+            displayValue,
+            operation,
+        } = this.state
+        return value + ' ' + operation + ' ' + inputValue
+    }
     render() {
         const {
             displayValue, clearText, operation, operationInProgress
         } = this.state
+        const {
+            getOverall,
+        } = this
 
         return (
             <div className="calculator">
+                <p  >{getOverall().trim()}</p>
                 <Display value={displayValue} />
                 <div className="keypad">
                     <Key className="key-function" onClick={() => this.clearDisplay()}>{clearText}</Key>
