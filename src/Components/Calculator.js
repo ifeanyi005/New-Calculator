@@ -138,7 +138,13 @@ export class Calculator extends Component {
             e.preventDefault()
             this.inputDecimalPoint()
         }
+
+
     };
+
+    keyPress = (e) => {
+        e.preventDefault()
+    }
 
     componentDidMount() {
         document.addEventListener('keydown', this.keyPressedDown)
