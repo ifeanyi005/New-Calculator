@@ -160,7 +160,7 @@ export class Calculator extends Component {
             displayValue,
             operation,
         } = this.state
-        return value + ' ' + operation + ' ' + inputValue
+        return value + ' ' + operation + ' ' + inputValue + ' = ' + displayValue
     }
     render() {
         const {

@@ -7,6 +7,7 @@ export class Display extends Component {
         return (
             <div>
                 <div className="display" {...props}>{value}</div>
+
             </div>
         )
     }
