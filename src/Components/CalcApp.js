@@ -340,7 +340,7 @@ class CalcApp extends Component {
                 <div className="inputs">
                     <div className="column main">
                         <div className="operator">
-                            <div className="row">
+                            {/* <div className="row">
                                 <button
                                     className={activeOperator('+')}
                                     onClick={operatorClickHandler}>+</button>
@@ -353,28 +353,40 @@ class CalcApp extends Component {
                                 <button
                                     className={activeOperator('*')}
                                     onClick={operatorClickHandler}>*</button>
-                            </div>
+                            </div> */}
                         </div> { /* operator */}
-                        <div className="numbers">
+                        <div className="numbers operator">
                             <div className="row">
                                 <button onClick={numberClickHandler}>1</button>
                                 <button onClick={numberClickHandler}>2</button>
                                 <button onClick={numberClickHandler}>3</button>
+                                <button
+                                    className={activeOperator('/')}
+                                    onClick={operatorClickHandler}>/</button>
                             </div>
                             <div className="row">
                                 <button onClick={numberClickHandler}>4</button>
                                 <button onClick={numberClickHandler}>5</button>
                                 <button onClick={numberClickHandler}>6</button>
+                                <button
+                                    className={activeOperator('*')}
+                                    onClick={operatorClickHandler}>*</button>
                             </div>
                             <div className="row">
                                 <button onClick={numberClickHandler}>7</button>
                                 <button onClick={numberClickHandler}>8</button>
                                 <button onClick={numberClickHandler}>9</button>
+                                <button
+                                    className={activeOperator('-')}
+                                    onClick={operatorClickHandler}>-</button>
                             </div>
                             <div className="row">
                                 <button onClick={numberClickHandler}>.</button>
                                 <button onClick={numberClickHandler}>0</button>
                                 <button onClick={deleteChar}>C</button>
+                                <button
+                                    className={activeOperator('+')}
+                                    onClick={operatorClickHandler}>+</button>
                             </div>
                         </div> { /* numbers */}
                     </div> { /* main */}

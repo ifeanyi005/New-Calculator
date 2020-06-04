@@ -160,15 +160,12 @@ export class Calculator extends Component {
             displayValue,
             operation,
         } = this.state
-        return value + ' ' + operation + ' ' + inputValue + ' = ' + displayValue
+        return value + ' ' + operation + ' ' + displayValue
     }
     render() {
-        const {
-            displayValue, clearText, operation, operationInProgress
-        } = this.state
-        const {
-            getOverall,
-        } = this
+        const { displayValue, clearText, operation, operationInProgress } = this.state
+
+        const { getOverall } = this
 
         return (
             <div className="calculator">
